@@ -1,0 +1,29 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "/api/render_html/index.js",
+			"use": "@now/node",
+			"config": {
+				"maxLambdaSize": "40mb"
+			}
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"methods": [
+				"OPTIONS",
+				"POST"
+			],
+			"headers": {
+				"Access-Control-Allow-Origin": "*"
+			},
+			"continue": true
+		},
+		{
+			"src": "/api/render_html",
+			"dest": "/api/render_html/index.js"
+		}
+	]
+}

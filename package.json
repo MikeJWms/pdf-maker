@@ -1,0 +1,17 @@
+{
+	"name": "invana_utility_api",
+	"version": "1.0.0",
+	"description": "Serverless-side utilities to expand functionality to the Invana client",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Michael J. Williams",
+	"license": "ISC",
+	"dependencies": {
+		"chrome-aws-lambda": "^1.11.1",
+		"micro-cors": "^0.1.1",
+		"puppeteer-core": "^1.11.0",
+		"qrcode": "^1.4.2"
+	}
+}
